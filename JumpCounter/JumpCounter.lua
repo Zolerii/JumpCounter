@@ -27,7 +27,7 @@ function dataObj:OnLeave()
 	GameTooltip:Hide()
 end
 
-hooksecurefunc( "JumpOrAscendStart", function()
+local function OnJumpOrAscendStart()
 	if JumpCounter == nil then
 		JumpCounter = 0
 	elseif not IsFalling() then
@@ -38,7 +38,9 @@ hooksecurefunc( "JumpOrAscendStart", function()
 		end
 	end
 	dataObj.text = string.format("%d Jumps", JumpCounter)
-end );
+end
+
+hooksecurefunc( "JumpOrAscendStart", OnJumpOrAscendStart )
 
 -- slash command
 for i, v in ipairs({"jc", "jumpcounter", "jumpcount"}) do
