@@ -4,8 +4,6 @@
 -- Description: Counts the number of times you jump
 -- Version: 1.1
 
-local UPDATE_PERIOD = 0.5
-local elapsed = 0
 local ldb = LibStub:GetLibrary("LibDataBroker-1.1")
 local dataObj = ldb:NewDataObject("Jump Counter", {type = "data source", text = "0 Jumps"})
 local frame = CreateFrame("frame")
