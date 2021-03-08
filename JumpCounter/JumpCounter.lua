@@ -2,7 +2,7 @@
 -- Name: JumpCounter
 -- Author: Aic
 -- Description: Counts the number of times you jump
--- Version: 1.1
+-- Version: 1.3
 
 local ldb = LibStub:GetLibrary("LibDataBroker-1.1")
 local dataObj = ldb:NewDataObject("Jump Counter", {type = "data source", text = "0 Jumps"})
