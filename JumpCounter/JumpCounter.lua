@@ -10,18 +10,6 @@ local ldb = LibStub:GetLibrary("LibDataBroker-1.1")
 local dataObj = ldb:NewDataObject("Jump Counter", {type = "data source", text = "0 Jumps"})
 local frame = CreateFrame("frame")
 
--- Write jumps to data broker
-frame:SetScript("OnUpdate", function(self, elap)
-	elapsed = elapsed + elap
-	if elapsed < UPDATE_PERIOD then
-		return
-	end
-
-	elapsed = 0
-	local fps = GetFramerate()
-	dataObj.text = string.format("%d Jumps", JumpCounter)
-end)
-
 -- Write data broker tool tip
 function dataObj:OnTooltipShow()
 	self:AddLine("Total Jumps")
@@ -49,6 +37,7 @@ hooksecurefunc( "AscendStop", function()
 			DEFAULT_CHAT_FRAME:AddMessage("|TInterface\\Icons\\INV_Gizmo_supersappercharge:32|t |cFFDAA520 Congratulations, It's your " .. JumpCounter .. "th Jump! |TInterface\\Icons\\INV_Gizmo_supersappercharge:32|t")
 		end
 	end
+	dataObj.text = string.format("%d Jumps", JumpCounter)
 end );
 
 -- slash command
