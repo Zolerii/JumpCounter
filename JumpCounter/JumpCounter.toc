@@ -2,7 +2,7 @@
 ## Title: JumpCounter
 ## Author: Aic
 ## Notes: Counts the number of times you jump
-## Version: 1.3
+## Version: 1.2
 ## SavedVariablesPerCharacter: JumpCounter
 
 # Libraries for data broker
