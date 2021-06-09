@@ -1,8 +1,8 @@
-## Interface: 11305
+## Interface: 20501
 ## Title: JumpCounter
-## Author: Aic
+## Author: Aic, Zolerii
 ## Notes: Counts the number of times you jump
-## Version: 1.2
+## Version: 1.0.0
 ## SavedVariablesPerCharacter: JumpCounter
 
 # Libraries for data broker
