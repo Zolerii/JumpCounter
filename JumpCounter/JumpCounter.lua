@@ -43,7 +43,7 @@ hooksecurefunc( "JumpOrAscendStart", function()
   if JumpCounter == nil then
     JumpCounter = 0
   else
-    if not IsFalling() then
+    if not IsFalling() and not IsSwimming() and not IsFlying() then
       JumpCounter = JumpCounter + 1
     end
     if JumpCounter == 10 or JumpCounter == 100 or JumpCounter == 1000 or mod(JumpCounter, 5000) == 0 then
